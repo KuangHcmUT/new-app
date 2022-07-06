@@ -1,0 +1,27 @@
+ const defgifts =[
+  'Đất đỏ',
+  'Lửa bạc',
+  'Sấm nâu',
+  'Lửa nâu',
+]
+  const [gift, setGift] = useState();
+  const [gifts, setGifts] = useState(defgifts);
+
+  const randomGift = () => {
+    const random = Math.floor(Math.random() * gifts.length);
+    const getGift = gifts[random];
+    setGifts(gifts.filter(gift => gift !== getGift));
+
+    console.log(gifts);
+    setGift(getGift);
+  }
+
+  return (
+    <div style={{padding: 32}}>
+      <h1>{gift || 'Tích cực quay tay vận may sẽ đến !!!'}</h1>
+
+      <button onClick={randomGift} style = {{fontSize: 32, color: "red"}} >Quay tay</button>
+    </div>
+  );
+
+
