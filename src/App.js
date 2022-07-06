@@ -62,7 +62,7 @@ function App() {
         <input
           type="text"
           value={search}
-          placeholder="Search"
+          placeholder="Search by postId"
           onChange={e => setSearch(e.target.value)}
         ></input>
         <button
